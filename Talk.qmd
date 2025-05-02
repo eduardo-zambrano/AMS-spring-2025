@@ -1,0 +1,400 @@
+---
+title: "Protected Income and Inequality Aversion"
+author: "Eduardo Zambrano (Cal Poly) and Marc Fleurbaey (PSE)"
+format:
+  revealjs: 
+    theme: default
+    html-math-method: mathjax
+---
+
+#### This material is based upon work supported by the National Science Foundation under Grant # 2313969
+
+## Plan
+
+::: {.incremental}
+- Quasi-arithmetic (QA) means
+- Examples
+- Ranking distributions by their QA means
+- Which QA-mean to use in my application?
+:::
+
+## Preliminaries
+- Consider a population of $n$ individuals
+- Each individual $i$ has a known income $y_{i} \ge 0$
+
+## Quasi-arithmetic mean and its generator $f$
+- $M_f\left(y_{1},...,y_{n}\right)=f^{-1}\left(\frac{1}{n}\sum_{i=1}^{n}f\left(y_{i}\right)\right)$
+
+
+::: aside
+$f$ is a function which maps an interval $I$ of the real line to the real numbers, and is both continuous and injective.
+:::
+
+## Examples
+
+::: {.incremental}
+- **Arithmetic Mean**  
+  If $I = \mathbb{R}$ and $f(x) = x$
+- **Geometric Mean**  
+  If $I = \mathbb{R}_+$ and $f(x) = \log(x)$  
+- **Harmonic Mean**  
+  If $I = \mathbb{R}_+$ and $f(x) = \frac{1}{x}$
+- **Power Mean**  
+  If $I = \mathbb{R}^+$ and $f(x) = x^p$, $p\ne0$
+:::
+
+## Ranking income distributions by their QA means
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/g4hf7euvtj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 1: The *IN* evaluator "></iframe>
+</div>
+
+::: aside
+$$M_f\left(y_{1},y_{2}\right)=f^{-1}\left(\frac{1}{2}f\left(y_{1}\right)+\frac{1}{2}f\left(y_{2}\right)\right)$$
+:::
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/alkwbiy983?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$M_f\left(y_{1},y_{2}\right)=f^{-1}\left(\frac{1}{2}f\left(y_{1}\right)+\frac{1}{2}f\left(y_{2}\right)\right)$$
+:::
+
+## Examples (Aki and Bo)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$M_f\left(y_{1},y_{2}\right)=f^{-1}\left(\frac{1}{2}f\left(y_{1}\right)+\frac{1}{2}f\left(y_{2}\right)\right)$$
+:::
+
+## Which QA-mean to use in my application?
+
+## Protected Income: $\ddot{Y}\left(y\right)$
+
+- The smallest a person's income gets along the level curve that passes through (y,y).
+
+
+## Inequality Neutral (`IN`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/g4hf7euvtj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 1: The *IN* evaluator "></iframe>
+</div>
+
+::: aside
+$$f(y)= y
+$$
+
+:::
+
+## Kolm - Pollak (`K-P`)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/alkwbiy983?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Kolm - Pollak (`K-P`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/ibznckd7fj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 2: The *CDPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Result 1 (`K-P`)
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+y - \frac{\ln 2}{\alpha} & \text{for } y > \frac{\ln 2}{\alpha} \\
+0 & \text{for } y \le \frac{\ln 2}{\alpha}
+\end{cases}
+$$
+
+::: aside
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+:::
+
+## Kolm - Pollak (`K-P`)
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/ibznckd7fj?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 2: The *CDPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$
+\ddot{Y}(y) =
+\begin{cases}
+y - \frac{\ln 2}{\alpha} & \text{for } y > \frac{\ln 2}{\alpha} \\
+0 & \text{for } y \le \frac{\ln 2}{\alpha}
+\end{cases}
+$$
+
+:::
+
+## Result 2 (`K-P`)
+
+If we let $\ddot{L} = \frac{\ln 2}{\alpha}$, we can write 
+
+$$f(y)=-2^{-\frac{y}{\ddot{L}}} \text{ for } \ddot{L}>0$$
+
+instead of
+
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+
+::: {.incremental}
+- $\ddot{L}$ is interpreted, in a two person evaluation, as the maximal absolute acceptable loss for Aki regarldless of the size of the gain for Bo.
+:::
+
+<!-- ## `Kolm - Pollak`: Summary
+
+$$f(y)= -e^{-\alpha y} \text{ for } \alpha > 0$$
+
+can be rewritten as
+$$f(y)=-2^{-\frac{y}{\ddot{L}}} \text{ for } \ddot{L}>0.$$
+
+
+::: {.incremental}
+- The `K-P` class never guarantees a positive protected level of income for all values of $y$.
+::: -->
+
+## Kolm - Atkinson (`K-A`)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= \begin{cases}
+\frac{y^{1-\gamma}}{1-\gamma} & \gamma \ne 1,\gamma > 0\\
+\ln y & \gamma=1
+\end{cases}
+$$
+:::
+
+## Result 3 (`K-A`)
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+2^{\frac{1}{1-\gamma}}y & \text{for } \gamma > 1 \\
+0 & \text{for } \gamma \le 1
+\end{cases}
+$$
+
+::: aside
+$$f(y)= \begin{cases}
+\frac{y^{1-\gamma}}{1-\gamma} & \gamma \ne 1,\gamma \ge 0\\
+\ln y & \gamma=1
+\end{cases}
+$$
+:::
+
+## Two `K-A` evaluators
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/bk7c6i7a0l?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+- The <span style="color: #4682B4;">blue</span> evaluator has $\gamma = 2$
+- The <span style="color: #9370DB;">purple</span> evaluator has $\gamma = \frac{1}{2}$
+:::
+
+## Kolm - Atkinson (`K-A`, $\gamma > 1$)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/hb5f5bi7c3?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+</div>
+
+::: aside
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1$$
+:::
+
+## Kolm - Atkinson (`K-A`, $\gamma > 1$)
+
+<div style="display: flex; justify-content: flex-end;">
+<iframe src="https://www.desmos.com/calculator/kwwwax4bou?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0 title="Figure 3: The *CRPI* evaluator"></iframe>
+</div>
+
+::: aside
+$$\ddot{Y}(y) = 2^{\frac{1}{1-\gamma}}y \text{  for } \gamma > 1 $$
+:::
+
+## Result 4 (`K-A`)
+
+If we let $\ddot{\kappa} = 2^{\frac{1}{1-\gamma}}$, we can write 
+
+$$f(y)=\log_2 \ddot{\kappa} \cdot y^{\frac{1}{\log_2 \ddot{\kappa}}}  \text{ for } \ddot{\kappa} \in(0,1)$$
+
+instead of
+
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1.$$
+
+::: {.incremental}
+- $(1 - \ddot{\kappa})$ is interpreted, in a two person evaluation, as the maximal relative acceptable loss for Aki regarldless of the size of the gain for Bo.
+:::
+
+<!-- ## `Kolm - Atkinson`: Summary
+
+$$f(y)= \frac{y^{1-\gamma}}{1-\gamma} \text{ for } \gamma > 1$$
+
+can be rewritten as
+$$f(y)= \log_2 \ddot{\kappa} \cdot y^{\frac{1}{\log_2 \ddot{\kappa}}} \text{ for } \ddot{\kappa} \in (0,1).$$
+
+
+::: {.incremental}
+- The `K-A` class never guarantees a positive protected level of income for any value of $y$ whenever $\gamma \le 1$.
+
+- The class protects a constant fraction of $y$ whenever $\gamma > 1$.
+::: -->
+
+## Fork on the Road {#menu}
+
+- [A new sub-class of QA means](#new)
+- [Characterizations](#characterizations)
+- [Conclusions](#conclusions)
+
+
+# A `new sub-class` of QA means {#new}
+
+## Progressive Protection
+
+Fix $c>0$. Let $f$ be defined for $y \ge c$ by
+
+$$f(y)= \begin{cases}
+\frac{\left(\ln \frac{y}{c}\right)^{1-\rho}}{1-\rho} & \rho \ne 1,\rho > 0\\
+\ln \ln \frac{y}{c} & \rho=1
+\end{cases}
+$$
+
+::: {.incremental}
+
+- $c$ is a normatively determined lower bound on protected income.
+:::
+
+##
+<iframe src="https://equistatlab.shinyapps.io/social-preferences/" width="100%" height="100%" style="border:none;"></iframe>
+
+## Result 5
+
+$$
+\ddot{Y}(y) =
+\begin{cases}
+0 & \text{for } \rho \le 1 \\
+y^{\ddot{\beta}}c^{1-\ddot{\beta}} & \text{for } \rho > 1
+\end{cases}
+$$
+
+where $\ddot{\beta} = 2^{\frac{1}{1-\rho}}.$
+
+::: {.incremental}
+- $\ddot{\beta}$ is the *income elasticity of protected income*.
+- For $\rho > 1$:
+    -  $\ddot{\beta} \in (0,1)$ 
+    -  $\frac{\ddot{Y}(y)}{y}= \left(\frac{c}{y}\right)^{1-\ddot{\beta}}$ is a decreasing function of income.
+:::
+
+## Result 6
+
+Given $\ddot{\beta} = 2^{\frac{1}{1-\rho}}$, we can write 
+
+$$f(y)=\log_2 \ddot{\beta} \cdot \left(\ln \frac{y}{c}\right)^{\frac{1}{\log_2 \ddot{\beta}}}  \text{ for } \ddot{\beta} \in(0,1)$$
+
+instead of
+
+$$f(y)= \frac{\left(\ln \frac{y}{c}\right)^{1-\rho}}{1-\rho} \text{ for } \gamma > 1.$$
+
+## Fork on the Road {#menu}
+
+- [Characterizations](#characterizations)
+- [Conclusions](#conclusions)
+
+## Summary {#conclusions}
+
+- We uncover an underlying geometric structure within the class of QA means that allows us to more transparently:
+    - Characterize
+    - Interpret
+    - Elicit
+    - Construct
+
+the proper QA mean for the purpose of ranking income distributions based on the tradeoffs between the well-being of the individuals that the evaluator considers acceptable.
+
+## Please visit `https://equistatlab.org/`
+
+<iframe src="https://equistatlab.org/" width="100%" height="600px" style="border:none;"></iframe>
+
+# Thank you!
+![](SLO.jpeg)
+
+# Extras
+
+## Characterizations {#characterizations}
+
+## Protected Income (against 2)
+
+Let $y_{1}(y_{2},y_{3},y)$ be defined implicitly by the equation 
+
+$$f(y_{1}(y_{2}, y_{3},y)) + f(y_{2})+ f(y_{3}) = 3 f(y).$$ 
+
+Let
+
+$$\dddot{Y}(y):=\inf\left\{ y_{1}(y_{2},y_{3},y)|(y_{2},y_{3},y)\in D_{123}\right\} $$
+
+## Result 7
+
+- $\dddot{Y}(y)= y - \frac{\ln 3}{\alpha}$ for the `K-P` class with $y > \frac{\ln 3}{\alpha}.$
+
+- $\dddot{Y}(y)= 3^{\frac{1}{1-\gamma}}y$ for the `K-A` class with $\gamma > 1$.
+
+- $\dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}$ for the `new class` with $\rho >1$ and $\dddot{\beta}=3^{\frac{1}{1-\rho}}$.
+
+## Side by side
+
+- For the `K-P` class:
+    - $\ddot{Y}(y)= y - \frac{\ln 2}{\alpha}$ with $y > \frac{\ln 2}{\alpha}.$
+ 
+    - $\dddot{Y}(y)= y - \frac{\ln 3}{\alpha}$ with $y > \frac{\ln 3}{\alpha}.$
+
+## Side by side
+- For the `K-A` class ($\gamma >1$):
+   - $\ddot{Y}(y)= 2^{\frac{1}{1-\gamma}}y$.
+   - $\dddot{Y}(y)= 3^{\frac{1}{1-\gamma}}y$.
+
+## Side by side
+- for the `new class` ($\rho>1$):
+   - $\ddot{Y}(y) = y^{\ddot{\beta}}c^{1-\ddot{\beta}}$ with $\ddot{\beta}=2^{\frac{1}{1-\rho}}$.
+   - $\dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}$ with $\dddot{\beta}=3^{\frac{1}{1-\rho}}$.
+
+## Result 8
+
+The `Kolm-Pollak` social preferences is (up to an affine transform and above a minimum level of income) characterized by the requirement that there exist $\Omega, \Delta >0$ such that, for all $y > \max$ \{ $\Omega, \Delta$ \}:  
+
+$$\ddot{Y}(y)= y - \Omega \text{ and } \dddot{Y}(y)= y - \Delta.$$ 
+
+One must then have $\Delta = \frac{\ln 2}{\alpha}$ and $\Omega = \frac{\ln 3}{\alpha}$ for some $\alpha > 0.$
+
+## Result 9
+The `Kolm-Atkinson` social preferences with $\gamma > 1$ is (up to an affine transform) characterized by the requirement that there exist $\lambda,\mu \in (0,1)$ such that, for all $y>0$:
+
+$$\ddot{Y}(y) = \lambda y \text{ and } \dddot{Y}(y)=\mu y.$$ 
+
+One must then have $\lambda=2^{\frac{1}{1-\gamma}}$ and $\mu=3^{\frac{1}{1-\gamma}}$ for some $\gamma>1$.
+
+## Result 10
+The `new class` of social preferences with $\rho > 1$ is (up to an affine transform) characterized by the requirement that there exist $\ddot{\beta},\dddot{\beta} \in (0,1), c>0$ such that, for all $y \in (c, \infty)$: 
+
+$$\ddot{Y}(y) = y^{\ddot{\beta}}c^{1-\ddot{\beta}} \text{ and } \dddot{Y}(y) = y^{\dddot{\beta}}c^{1-\dddot{\beta}}.$$
+
+One must then have $\ddot{\beta}=2^{\frac{1}{1-\gamma}}$ and $\dddot{\beta}=3^{\frac{1}{1-\gamma}}$ for some $\rho>1$.
+
+## Back to [the menu](#menu)
+
+
+
