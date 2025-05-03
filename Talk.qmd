@@ -311,10 +311,7 @@ instead of
 
 $$f(y)= \frac{\left(\ln \frac{y}{c}\right)^{1-\rho}}{1-\rho} \text{ for } \gamma > 1.$$
 
-## Fork on the Road {#menu}
-
-- [Characterizations](#characterizations)
-- [Conclusions](#conclusions)
+## Back to [the menu](#menu)
 
 ## Summary {#conclusions}
 
